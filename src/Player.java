@@ -2,7 +2,7 @@ public class Player {
     private double x,y;
     private double speed;
     private double rotationDegree;
-    final static double  DISTANCE_VIEW = 300,VIEWING_ANGEL = 20, TURNING_SPEED = 3;
+    final static double  DISTANCE_VIEW = 200,VIEWING_ANGLE = 45, TURNING_SPEED = 2;
 
     public Player(double x, double y, double speed, double rotationDegree) {
         this.x = x;
@@ -32,6 +32,14 @@ public class Player {
     public void moveDown() {
         x-=(Math.sin(Math.toRadians(rotationDegree))* speed);
         y-=(Math.cos(Math.toRadians(rotationDegree))* speed);
+    }
+    public void moveRight() {
+        x+=(Math.sin(Math.toRadians(rotationDegree+90))* speed);
+        y+=(Math.cos(Math.toRadians(rotationDegree+90))* speed);
+    }
+    public void moveLeft() {
+        x+=(Math.sin(Math.toRadians(rotationDegree-90))* speed);
+        y+=(Math.cos(Math.toRadians(rotationDegree-90))* speed);
     }
 
     public void turnLeft(){

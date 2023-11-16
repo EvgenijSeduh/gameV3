@@ -9,7 +9,7 @@ public class Scene extends JFrame {
         add(new Logic());
         setBackground(Color.black);
         setSize(800, 450);
-        //setExtendedState(MAXIMIZED_BOTH);
+        setExtendedState(MAXIMIZED_BOTH);
         setLocation(40,40);
         setVisible(true);
     }
